@@ -19,6 +19,7 @@
     --fs-h2: 3.25rem;
     --fs-h3: 2.25rem;
     --fs-body: 1rem;
+    --bs: 0.25em 0.25em 0.75em rgb(0, 0, 0, 0.25);
 }
 @media (min-width:800px){
     :root {
@@ -37,6 +38,10 @@ body {
     font-family: var(--ff-primary); 
 }
 
+section {
+    padding: 5em 2em;
+}
+
 img {
     display: block;
     max-width: 100%;
@@ -46,7 +51,7 @@ img {
 h1,
 h2,
 h3{
-    line-height: 1.1;
+    line-height: 1;
     margin: 0;
 }
 
@@ -58,7 +63,7 @@ h3 {font-size: var(--fs-h3);}
     font-size: var(--fs-h3);
     font-weight: var(--fw-bold);
     color: var(--clr-dark);
-    margin: 0;
+    margin-bottom: .25rem;
 }
 
 .section__title--intro strong {
@@ -74,4 +79,149 @@ h3 {font-size: var(--fs-h3);}
 .section__subtitle--about{
     background: var(--clr-accent);
     font: var(--ff-secondary);
+    margin-bottom: 1rem;
+    padding: 25em 1em;
+}
+
+.nav {
+    display: none;
+}
+
+/* intro section */
+.intro {
+    position: relative;
+
+}
+
+.intro__img{
+    box-shadow: var(--bs);
+}
+
+.section__subtitle--intro {
+    display: inline-block;
+}
+
+@media (min-width: 600px){
+    .intro {
+        display:grid;
+        grid-column-gap:1em;
+        width: min-content;
+        margin: 0 auto;
+        grid-template-areas:
+            "img title"
+            "img subtitle";
+        grid-template-columns: min-content max-content;
+    }
+    .intro__img {
+        grid-area: img;
+        min-width: 250px;
+        float: left;
+        position: relative;
+        z-index: 1;
+    }
+    .subtitle--desc {
+        /* move slightly to the right */
+        left: 1em;
+    }
+}
+
+
+.section__subtitle--intro {
+    padding: 0.5em;
+    align-self: start;
+    grid-column: -1 / 1;
+    grid-row: 2;
+    text-align: right;
+    position: relative;
+    width: calc(100%+1.5em);
+}
+
+.my-services {
+    background-color: var(--clr-dark);
+    color: var(--clr-light);
+}
+
+.btn {
+    text-decoration: none;
+    color: var(--clr-accent);
+    /* make it centered */
+
+    display: inline-block;
+    padding: 0.5em 1em;
+    border: 1px solid var(--clr-accent);
+    border-radius: 0.25rem;
+    font-size: var(--fs-body);
+    font-weight: var(--fw-bold);
+    text-transform: uppercase;
+    transition: all 0.2s ease-in-out;
+    /* move it to the center */
+    margin: 0 auto;
+    /* make it bigger */
+    font-size: 1.2em;
+
+
+}
+
+.btn:hover {
+    text-decoration:underline;
+    /* make the underline thicker */
+    text-decoration-thickness: 2px;;
+}
+
+.about-me {
+    max-width: 1000px;
+    margin: 0 auto;
+}
+
+/* footer */
+
+footer {
+    text-decoration: none;
+    text-decoration-color:var(--clr-light) ;
+    background-color: var(--clr-dark);
+    color: var(--clr-light);
+    padding: 1em;
+    text-align: center;
+    /* remove list dots */
+}
+
+.social-list__item {
+    display: inline-block;
+    margin: 0 1em;
+    list-style: none;
+    /* move slightly to the left */
+    margin-left: -0.5em;
+}
+
+.social-list__link {
+    text-decoration: none;
+    color: var(--clr-accent);
+    transition: all 0.2s ease-in-out;
+    /* move slightly to the left */
+    margin: 0 0.5em;
+    /* make it bigger */
+    font-size: 1.2em;
+}
+
+.footer-email {
+    text-decoration: none;
+    color: var(--clr-light);
+}
+
+.footer-email:hover{
+    text-decoration: underline;
+}
+
+.logo {
+    /* make the logo slightly to the right */
+    margin-left: 0.5em;
+    margin-top: 0.5em;
+    /* make the image smaller */
+    width: 10em;
+
+}
+
+/* make a custom scrollbar */
+::-webkit-scrollbar {
+    width: 0.5em;
 }

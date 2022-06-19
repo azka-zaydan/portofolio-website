@@ -3,77 +3,68 @@
     <head>
         <meta charset="utf-8">
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
-        <title>Azka's Portofolio</title>
+        <title>Azka's Portofolio Site</title>
         <meta name="description" content="">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <link rel="stylesheet" href="styles.css">
+        <script src="https://kit.fontawesome.com/8872fd79cc.js" crossorigin="anonymous"></script>
         <!-- import poppins font -->
         <link href="https://fonts.googleapis.com/css?family=Poppins:300,400,500,600,700" rel="stylesheet">
     </head>
     <body>
         <header>
-            <div class="logo">
-                <img src="images/logo.png" alt="logo">
+            <div class="header-logo">
+                <img src="img/logo-no-bg.png" alt="" class="logo">
             </div>
-            <button class="nav-toggle" aria-label="toggle navigation">
-                <span class="hamburger"></span>
-            </button>
-            <nav class="nav">
-                <ul class="nav__list">
-                    <li class="nav__item"><a href="#" class="nav__link">Home</a></li>
-                    <li class="nav__item"><a href="#" class="nav__link">About</a></li>
-                    <li class="nav__item"><a href="#" class="nav__link">Portfolio</a></li>
-                    <li class="nav__item"><a href="#" class="nav__link">Contact</a></li>
-                </ul>
-            </nav>
         </header>
         <!-- introduction -->
         <section class="intro" id="home">
-            <div class="intro--content">
                 <h1 class="section__title section__title--intro">Hello, I'm <strong>Azka Rafif</strong></h1>
-                <p class="section__subtitle section__subtitle--intro">
+                <p class="section__subtitle section__subtitle--intro subtitle--desc">
                     Back-End dev.
                 </p>
                 <!-- image of me smiling -->
-                <img src="images/me.jpg" alt="me" class="intro__img">
-            </div>
+                <img src="img/azka.jpg" alt="me" class="intro__img">
         </section>
         <section class="my-services" id="services">
             <!-- services section -->
-            <h2 class="section__title section__title--services">What i do</h2>
+            <h2 class="section__title section__title--services">What I do</h2>
             <div class="services">
                 <h3>Python</h3>
-                <p>Data analyzing with Pandas, Web Scraping with beautiful soup, and making Restful APIs with fastapi</p>
+                <p>Data analyzing with Pandas, Web Scraping with BS4, and making Restful APIs with fastapi</p>
             </div>
             <div class="services">
                 <h3>Javascript</h3>
                 <p>Making Restful APIs with the hapi and express frameworks</p>
             </div>
-            <a href="#work" class="btn">My Work</a>
+            <a href="https://github.com/azka1415" class="btn">My Work</a>
         </section>
 
         <!-- About me section -->
         <section class="about-me" id="about">
-            <h2 class="section__title section__title--about">Who i am</h2>
-            <p class="section__subtitle section__subtitle--about"></p>
+            <h2 class="about-me__info">Who I am</h2>
+            <p class="about-me__where">Developer based out of East Jakarta</p>
             <div class="about-me__body">
-                <p></p>
+                <p>18 years old, is fluent in English and Bahasa</p>
+                <!-- make a paragraph about me -->
+                <p>I'm a developer that is passionate about programming and I'm always looking for new challenges to learn new things.</p>
             </div>
 
-            <img src="img/azka.jpg" alt="me again">
         </section>
         <!-- footer -->
         <footer>
-            <div class="footer__content">
-                <a href="mailto:rafifzaydan4@gmail.com">rafifzaydan4@gmail.com</a>
+                <p>rafifzaydan4@gmail.com</p>
                 <ul>
-                    <li class="social-list__item"><a href="social-list__link"><img src="img/github--logo.png" alt="github logo"></a></li>
-                    <li class="social-list__item"><a href="social-list__link"><img src="img/instagram--logo.png" alt="instagram logo"></a></li>
+                    <li class="social-list__item">
+                        <a href="https://github.com/azka1415" class="social-list__link"><i class="fab fa-github"></i></a>
+                    </li>
+                    <li class="social-list__item">
+                        <a href="https://www.instagram.com/azkarafifz/" class="social-list__link"><i class="fab fa-instagram"></i></a>
+                    </li>
                 </ul>
                 <p class="footer__text">
                     &copy; 2022 Azka's Portofolio
                 </p>
-            </div>
         </footer>
     </body>
 </html>
